@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import LoginPage from "./LoginPage";
+import Welcome from "./Welcome";
 
 const IndexPage = () => {
   return (
