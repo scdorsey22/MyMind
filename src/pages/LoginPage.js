@@ -4,13 +4,7 @@ import { Box } from '@mui/material';
 
 const LoginPage = () => {
   return (
-    <Box
-    sx={{
-      
-      backgroundColor: '#253334',
-      height: '100vh'
-    }}
-  >
+    <Box>
       <SignInForm />
     </Box>
   );

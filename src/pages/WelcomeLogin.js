@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Box, Button, Container, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link } from 'gatsby';
 import Background from '../images/Background.svg'; 
 import Logo from '../images/Logo.svg'
 
-function Welcome() {
+function WelcomeLogin() {
 
 
   return (
@@ -42,7 +42,7 @@ function Welcome() {
           alignItems: 'center',}}>
         <Button 
         component={Link}
-        to="/login"
+        to="/LoginPage"
         fullWidth variant="contained" 
         sx={{ 
             mt: 15, 
@@ -70,4 +70,4 @@ function Welcome() {
   );
 }
 
-export default Welcome;
+export default WelcomeLogin;

@@ -1,15 +1,20 @@
 import React from "react";
 import { Link } from "gatsby";
 import LoginPage from "./LoginPage";
-import Welcome from "./Welcome";
+import WelcomeLogin from "./WelcomeLogin";
+import WelcomePage from "./WelcomePage";
 
 const IndexPage = () => {
   return (
     <div>
-      <h1>Welcome to My Gatsby App</h1>
-      <p>This is the home page.</p>
-      <Link to="/login">
+      <Link to="/LoginPage">
         <LoginPage />
+      </Link>
+      <Link to="/WelcomeLogin">
+        <WelcomeLogin />
+      </Link>
+      <Link to="/WelcomePage">
+        <WelcomePage />
       </Link>
     </div>
   );
