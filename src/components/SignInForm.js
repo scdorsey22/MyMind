@@ -16,11 +16,25 @@ const SignInForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await auth.signInWithEmailAndPassword(email, password);
+      const { user } = await auth.signInWithEmailAndPassword(email, password);
+
+      // Insert/update the user document here
+      await auth.currentUser.getIdTokenResult(true);
+      await auth.firestore().collection('users').doc(user.uid).set(
+        {
+          uid: user.uid,
+          email: user.email,
+        },
+        { merge: true }
+      );
     } catch (err) {
       setError(err.message);
     }
   };
+
+
+
+  
 
 
 
